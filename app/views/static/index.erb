@@ -1,2 +1,31 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+
+
+		
+<form action="/submit" method="post">
+	<input type="text" name="long_url" class="shorten-input" placeholder="Paste a link to shorten it">
+	<input type="submit" class="button" name="Submit">
+</form>
+<%# if @error == true %>
+ 	<!-- <p style="color:red">URL is invalid. Try again</p> -->
+<%# end %>
+
+<% if flash %>
+  <% flash.each do |k,v| %>
+    <div class = “alert alert-<%= k %>“><%=v%> </div>
+  <% end %>
+<% end %>
+
+<table class="modify">
+<tr>
+<th>LONG URL</th>
+<th>SHORT URL</th>
+<th>COUNTER</th>
+</tr>
+<% @url.each do |x| %>
+<tr>
+<td><%= x.long_url %></td>
+<td><a href="/<%=x.short_url%>">http:/bit.ly/<%= x.short_url %></a></td>
+<td><%= x.count_click %></td>
+</tr>
+<% end %>
+</table>
