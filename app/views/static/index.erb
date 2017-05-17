@@ -1,8 +1,8 @@
 
 
 		
-<form action="/urls" method="post" class="form">
-	<input type="text" name="long_url" id="shorten-input" placeholder="Paste a link to shorten it">
+<form id="target" action="/urls" method="post" class="form">
+	<input type="text" onpaste="onPasteLink()" name="long_url" id="shorten-input" placeholder="Paste a link to shorten it">
 	<input type="submit" id="button" name="Submit">
 </form>
 <%# if @error == true %>
@@ -19,13 +19,15 @@
 	<tr>
 		<th>LONG URL</th>
 		<th>SHORT URL</th>
-		<th>COUNTER</th>
+		<th>VISITED</th>
 	</tr>
-	<% @url.each do |x| %>
+	<tbody class="initial-table">
+	<% Url.order('created_at DESC').first(7).each do |x| %>
 		<tr>
 		<td><%= x.long_url %></td>
 		<td><a href="/<%=x.short_url%>">http:/bit.ly/<%= x.short_url %></a></td>
 		<td><%= x.count_click %></td>
 		</tr>
 	<% end %>
+	</tbody>
 </table>

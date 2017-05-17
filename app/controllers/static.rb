@@ -11,18 +11,20 @@ end
 #  erb :"static/profile"
 # end
 
-post "/urls" do 
+post "/urls" do
+p params 
 	long = Url.new(long_url: params[:long_url])
 	
 	if long.save
 		# @error = false
-		flash[:success] = "Congrats, you created a bitly link."
+		Url.order('created_at DESC').first(7).to_json(except: :id)
+		# flash[:success] = "Congrats, you created a bitly link."
 	else
-		flash[:error] = "Woops, something went wrong."
-		flash[:danger] = "Please type correct link"
+		# flash[:error] = "Woops, something went wrong."
+		# flash[:danger] = "Please type correct link"
 		# @error = true
 	end
-	redirect to '/'
+	# redirect to '/'
 end
 
 # post '/long_url' do
@@ -42,9 +44,8 @@ end
 
 get '/:short_url' do
 	
-
 	link = Url.find_by(short_url: params[:short_url])
 	link.count_click += 1
 	link.save
-	redirect to "http://" + link.long_url
+	redirect to link.long_url
 end
