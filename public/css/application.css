@@ -2,11 +2,13 @@
 
 
 .container{
-	background-image: url("../img/H3J3kaj.jpg");
+	background-image: url("../img/grass.jpg");
+	background-position: bottom center;
 	background-size: 1350px 550px;
-	padding: 20px;
+	padding: 0px 0px;
 	width: 100%;
-	height: 430px;
+	height: 530px;
+/*	background-size: container;*/
 } 
 
 .page-title{
@@ -16,9 +18,10 @@
 	color: black;
 	line-height: 28px;
 	text-align: center;
+	padding-top: 20px;
 }
 
-.shorten-input{
+#shorten-input{
 	width: 80%;
 	height: 50px;
 	padding: 14.4px 23px;
@@ -51,7 +54,7 @@ th {
     color: white;
 }
 
-.button {
+#button {
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -62,11 +65,68 @@ th {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    width: 18%;
 }
 
-/*body {
-		background: url("img_flwr.gif");
+.modify{
+	margin: auto;
+	padding-top: 20px;
+}
+
+.form{
+	width: 80%;
+	margin: auto;
+	padding-top: 0px;
+}
+
+body {
+/*		background: url("img_flwr.gif");
 		background-size: 100px 160px;
-    background-repeat: no-repeat;
-    padding-top: 40px;
-	}*/
+    background-repeat: no-repeat;*/
+    padding: 0px 0px;
+    margin:  0px 0px;
+	}
+
+.topnav {
+  overflow: hidden;
+  text-decoration: 
+/*  background-color: #333;*/
+}
+
+p.fancy{
+  font-family: Pacifico;
+  font-size: 20px;
+}
+
+.disappear{
+  font-family: Arial;
+  font-size: 120%;
+  margin: auto;
+  padding: 0px 0px 0px 120px;
+  background-color: rgba(169,154,154,0.74);
+}
+
+.inst_header{
+  font-size: 180%;
+  color: purple;
+}
+
+/*.topnav a {
+  float: left;
+  display: block;
+  color: pink;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}*/

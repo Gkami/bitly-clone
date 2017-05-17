@@ -1,14 +1,17 @@
 enable :sessions
+
 get '/' do
-	@url = Url.all.limit(7)
+
+	@url = Url.limit(7)
+	
   erb :"static/index"
 end
 
-get '/profile' do
- erb :"static/profile"
-end
+# get '/profile' do
+#  erb :"static/profile"
+# end
 
-post "/submit" do 
+post "/urls" do 
 	long = Url.new(long_url: params[:long_url])
 	
 	if long.save
@@ -38,6 +41,7 @@ end
 
 
 get '/:short_url' do
+	
 
 	link = Url.find_by(short_url: params[:short_url])
 	link.count_click += 1

@@ -1,9 +1,9 @@
 
 
 		
-<form action="/submit" method="post">
-	<input type="text" name="long_url" class="shorten-input" placeholder="Paste a link to shorten it">
-	<input type="submit" class="button" name="Submit">
+<form action="/urls" method="post" class="form">
+	<input type="text" name="long_url" id="shorten-input" placeholder="Paste a link to shorten it">
+	<input type="submit" id="button" name="Submit">
 </form>
 <%# if @error == true %>
  	<!-- <p style="color:red">URL is invalid. Try again</p> -->
@@ -16,16 +16,16 @@
 <% end %>
 
 <table class="modify">
-<tr>
-<th>LONG URL</th>
-<th>SHORT URL</th>
-<th>COUNTER</th>
-</tr>
-<% @url.each do |x| %>
-<tr>
-<td><%= x.long_url %></td>
-<td><a href="/<%=x.short_url%>">http:/bit.ly/<%= x.short_url %></a></td>
-<td><%= x.count_click %></td>
-</tr>
-<% end %>
+	<tr>
+		<th>LONG URL</th>
+		<th>SHORT URL</th>
+		<th>COUNTER</th>
+	</tr>
+	<% @url.each do |x| %>
+		<tr>
+		<td><%= x.long_url %></td>
+		<td><a href="/<%=x.short_url%>">http:/bit.ly/<%= x.short_url %></a></td>
+		<td><%= x.count_click %></td>
+		</tr>
+	<% end %>
 </table>
