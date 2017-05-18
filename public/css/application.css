@@ -96,6 +96,8 @@ body {
 p.fancy{
   font-family: Pacifico;
   font-size: 20px;
+  text-align: -webkit-center;
+  
 }
 
 .disappear{
