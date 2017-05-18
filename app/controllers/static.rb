@@ -3,6 +3,7 @@ enable :sessions
 get '/' do
 
 	@url = Url.limit(7)
+	# Url.order('created_at DESC').first(7).to_json(except: :id)
 	
   erb :"static/index"
 end
@@ -14,7 +15,6 @@ end
 post "/urls" do
 p params 
 	long = Url.new(long_url: params[:long_url])
-	
 	if long.save
 		# @error = false
 		Url.order('created_at DESC').first(7).to_json(except: :id)
@@ -24,7 +24,7 @@ p params
 		# flash[:danger] = "Please type correct link"
 		# @error = true
 	end
-	 redirect to '/'
+	 # redirect to '/'
 end
 
 # post '/long_url' do

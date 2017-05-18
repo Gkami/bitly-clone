@@ -58,13 +58,12 @@ function genLink(formdata){
 					var resultStr; // need a var to store as data will be executed one by one
     			$.each(data, function(index, value) {
     				resultStr += 
-    				"<tr style="background-color: red">" +
+    				"<tr>" +
 		        		"<td>" + data[index].long_url + "</td>" +
-		        		"<td><a href='" + data[index].short_url + "' target='_blank'>" + "http://bit.ly/" + data[index].short_url + "</td>" +
+		        		"<td><a href='" + data[index].short_url + "' target='_blank'>" + "http://bit.ly/" + data[index].short_url + "</a>" + "</td>" +
 		        		"<td>" + data[index].count_click + "</td>" +
 	        		"</tr>"
         		})
-
     			$('.initial-table').html(resultStr); //result will be displayed in the table
 			}
 
