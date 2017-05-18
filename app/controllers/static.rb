@@ -24,7 +24,7 @@ p params
 		# flash[:danger] = "Please type correct link"
 		# @error = true
 	end
-	# redirect to '/'
+	 redirect to '/'
 end
 
 # post '/long_url' do
