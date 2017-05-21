@@ -1,4 +1,4 @@
-enable :sessions
+enable :sessions # used for flash to remember even it redirect to other page
 
 get '/' do
 

@@ -65,6 +65,8 @@ function genLink(formdata){
 	        		"</tr>"
         		})
     			$('.initial-table').html(resultStr); //result will be displayed in the table
+					$($('.initial-table')[0].children[0]).effect("highlight", {color:"red"}, 3000) //need to add $ so that it will recognize it as jQuery (else it will return effect no function)
+					//$('.initial-table tr:nth-child(2)').effect("highlight", {color:"red"}, 3000) // you dont need $ as it will take the css code - nth child
 			}
 
 		})
