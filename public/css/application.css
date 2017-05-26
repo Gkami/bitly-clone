@@ -1,0 +1,134 @@
+
+
+
+.container{
+	background-image: url("../img/grass.jpg");
+	background-position: bottom center;
+	background-size: 100%;
+	padding: 0px 0px;
+	width: 100%;
+	height: 100%;
+/*	background-size: container;*/
+} 
+
+.page-title{
+	font-family: "brandon-grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 5000;
+	font-size: 36px;
+	color: white;
+	line-height: 28px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#shorten-input{
+	width: 80%;
+	height: 50px;
+	padding: 14.4px 23px;
+	font-family: "brandon-grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 20px;
+	font-weight: 250;
+	background-color: cornsilk;
+	color: blue;
+	line-height: 32px;
+	border-radius: 3px;
+	border-width: 0;
+	box-shadow: 0 0 0 1px;
+}
+
+table {
+  width: 80%;
+  border-collapse: separate;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: linen}
+tr:nth-child(odd){background-color: LemonChiffon}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 18%;
+}
+
+.modify{
+	margin: auto;
+	padding-top: 20px;
+}
+
+.form{
+	width: 80%;
+	margin: auto;
+	padding-top: 0px;
+}
+
+body {
+/*		background: url("img_flwr.gif");
+		background-size: 100px 160px;
+    background-repeat: no-repeat;*/
+    padding: 0px 0px;
+    margin:  0px 0px;
+	}
+
+.topnav {
+  overflow: hidden;
+  text-decoration: 
+/*  background-color: #333;*/
+}
+
+p.fancy{
+  font-family: Pacifico;
+  font-size: 20px;
+  text-align: -webkit-center;
+  
+}
+
+.disappear{
+  font-family: Arial;
+  font-size: 120%;
+  margin: auto;
+  padding: 0px 0px 0px 120px;
+  background-color: rgba(169,154,154,0.74);
+}
+
+.inst_header{
+  font-size: 180%;
+  color: purple;
+}
+
+/*.topnav a {
+  float: left;
+  display: block;
+  color: pink;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}*/
